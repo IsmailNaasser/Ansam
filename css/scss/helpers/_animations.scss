@@ -1,0 +1,29 @@
+/* Show And Hidden Animation */
+@keyframes fadeToggle {
+  0% {
+    opacity: 1
+  }
+  
+  50% {
+    opacity: .5
+  }
+  
+  100% {
+    opacity: 1
+  }
+}
+
+/* Stroll Top And Bottom Animation */
+@keyframes topAndbottom {
+  0% {
+    transform: translateY(0)
+  }
+  
+  50% {
+    transform: translateY(-5px)
+  }
+  
+  100% {
+    transform: translateY(2px)
+  }
+}

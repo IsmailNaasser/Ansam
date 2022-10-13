@@ -1,0 +1,578 @@
+@charset "UTF-8";
+/* Hide the horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Remove any focus in the page */
+:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #000;
+}
+
+/* Reset the ul and ol */
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Default style for buttons  */
+button {
+  background: transparent;
+  border: 1px solid #000;
+  font-size: 17px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+/* Transparent Layer*/
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 87, 146, 0.8);
+}
+
+/* Hightlight */
+.mark {
+  background-color: #f1c40f;
+  color: #005f9e;
+  padding: 2px 3px 3px;
+}
+
+/* Special shape for "Ùˆ" letter. "Ùˆ" is a arabic letter*/
+.amp {
+  color: #ffd11a;
+  font-family: "Mada", sans-serif;
+}
+@media (max-width: 500px) {
+  .amp {
+    /* If you put the amp class in the middle between two words, he would breake the two words to be verticaly shape, just in devices max width 500 */
+    display: block;
+  }
+}
+
+/* Line separate between heading and information */
+.separator {
+  width: 100px;
+  height: 2px;
+  margin: 13px 0;
+  background-color: #ffd11a;
+  display: block;
+}
+
+/* Custom class like bootstrap for coloring the background like sky */
+.bg-sky {
+  background-color: #0c5460 !important;
+}
+
+/* responsive order property to change the arrangement of the element in small devices */
+@media (max-width: 991px) {
+  .order-m991-2 {
+    order: 2;
+  }
+}
+
+/* Show And Hidden Animation */
+@keyframes fadeToggle {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Stroll Top And Bottom Animation */
+@keyframes topAndbottom {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(2px);
+  }
+}
+.header, .trust-in-god {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+
+.comments form .like-button button, .moral .comments .submit-button input {
+  border-color: #F1C40F !important;
+  color: #FFF !important;
+  border-width: 2px;
+  font-weight: bold;
+  transition: all .3s ease-in-out;
+  font-family: "Cairo", sans-serif;
+  font-size: 15px;
+  border-radius: 3px;
+}
+.comments form .like-button button:hover, .moral .comments .submit-button input:hover {
+  background-color: #F1C40F;
+  color: #000 !important;
+}
+
+/* Start Comments System */
+.comments {
+  margin-bottom: 3em;
+}
+.comments .triangle {
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 0 15px 15px 15px;
+  border-color: #F00 transparent #F1C40F;
+  border-style: solid;
+  position: absolute !important;
+  top: 1%;
+}
+@media (max-width: 991px) {
+  .comments .triangle {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .comments form .text-area {
+    text-align: center;
+  }
+}
+.comments form .text-area textarea {
+  width: 90%;
+  height: 125px;
+  resize: none;
+  font-family: "Tajawal", sans-serif;
+  padding: 10px;
+  transition: all .3s ease-in-out;
+  border-radius: 3px;
+  margin: 15px;
+  margin-top: 3em;
+  background: transparent;
+  border: 1px solid #1d7a86;
+  color: #000;
+  transition: all .3s ease-in-out;
+}
+.comments form .text-area textarea:focus {
+  border: 1px solid #1d7a86;
+}
+@media (max-width: 991px) {
+  .comments form .text-area textarea {
+    width: 97% !important;
+    margin-bottom: 10px !important;
+  }
+}
+.comments form .submit-button {
+  font-family: "Cairo", sans-serif;
+  width: 90%;
+  margin: auto;
+}
+.comments form .submit-button input {
+  background: none;
+  border: 1px solid #1d7a86;
+  padding: 5px 30px;
+  cursor: pointer;
+  color: #1d7a86;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: all .3s ease-in-out;
+}
+.comments form .submit-button input:hover {
+  background-color: #1d7a86;
+  color: #FFF;
+}
+.comments form .like-button {
+  width: 100%;
+}
+.comments form .like-button button {
+  padding: 5px 20px;
+}
+
+/* End Comments System */
+/* Header */
+.header {
+  height: 100vh;
+  background-image: url(../images/header-image.jpg);
+  position: relative;
+  overflow: hidden;
+}
+.header .container {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+.header .navbar {
+  font-family: "Tajawal", sans-serif;
+  /* Adjust the responsive in small devices */
+}
+@media (max-width: 991px) {
+  .header .navbar .navbar-toggler {
+    border: 2px solid #F1C40F;
+  }
+  .header .navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#ffd11a' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+}
+@media (max-width: 991px) {
+  .header .navbar .navbar-nav {
+    border-bottom: 1px solid #F1C40F;
+  }
+}
+.header .navbar .navbar-nav .active > .nav-link {
+  color: #FFD11A !important;
+}
+.header .navbar .navbar-nav .nav-item {
+  margin: 10px;
+}
+.header .navbar .navbar-nav .nav-item .nav-link {
+  font-weight: bold;
+  color: #FFF;
+}
+.header .navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #FFD11A !important;
+}
+@media (max-width: 991px) {
+  .header .navbar .navbar-nav .nav-item .nav-link i {
+    text-align: right !important;
+    display: inline-block !important;
+    margin-left: 10px;
+  }
+}
+.header .navbar .navbar-nav .nav-item .nav-link i:hover {
+  color: #FFD11A !important;
+}
+.header .header-caption {
+  margin-bottom: 50px;
+}
+.header .header-caption h1 {
+  font-size: 9em;
+  font-family: "Changa", sans-serif;
+  position: relative;
+}
+.header .header-caption h1:before, .header .header-caption h1:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: #F1C40F;
+  display: block;
+  position: absolute;
+}
+@media (max-width: 767px) {
+  .header .header-caption h1:before, .header .header-caption h1:after {
+    width: 40px;
+  }
+}
+@media (max-width: 350px) {
+  .header .header-caption h1:before, .header .header-caption h1:after {
+    width: 20px;
+  }
+}
+.header .header-caption h1:before {
+  top: 60%;
+  left: 0;
+}
+@media (max-width: 500px) {
+  .header .header-caption h1:before {
+    left: 0;
+    top: 59%;
+  }
+}
+.header .header-caption h1:after {
+  bottom: 40%;
+  right: 0;
+}
+@media (max-width: 500px) {
+  .header .header-caption h1:after {
+    right: 0;
+  }
+}
+@media (max-width: 500px) {
+  .header .header-caption h1 {
+    font-size: 5em;
+  }
+}
+.header .header-caption p {
+  font-family: "Tajawal", sans-serif;
+  margin-top: 45px;
+  font-size: 17px;
+}
+@media (max-width: 767px) {
+  .header .header-caption p {
+    font-size: 15px;
+  }
+}
+.header .header-caption button {
+  border: 1px solid #F1C40F;
+  color: #000;
+  font-family: "Tajawal", sans-serif;
+  font-weight: bold;
+  transition: all .3s ease-in-out;
+}
+.header .header-caption button:hover {
+  background-color: #F1C40F;
+  color: #FFF;
+}
+.header .program-caption .heading {
+  margin-bottom: 35px;
+}
+.header .program-caption .heading h1 {
+  font-size: 5em;
+  font-family: "Tajawal", sans-serif;
+}
+@media (max-width: 991px) {
+  .header .program-caption .heading h1 {
+    font-size: 4em;
+  }
+}
+@media (max-width: 767px) {
+  .header .program-caption .heading h1 {
+    margin-bottom: -15px !important;
+  }
+}
+@media (max-width: 550px) {
+  .header .program-caption .heading h1 {
+    font-size: 3em;
+    margin-top: 15px !important;
+    margin-bottom: -25px !important;
+  }
+}
+@media (max-width: 417px) {
+  .header .program-caption .heading h1 {
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 355px) {
+  .header .program-caption .heading h1 {
+    font-size: 2em;
+    margin-bottom: 10px !important;
+    margin-top: 0;
+  }
+}
+.header .program-caption .heading h1 strong {
+  font-family: "Cairo", sans-serif;
+  color: #F1C40F;
+}
+.header .program-caption .program-details .row > div:first-child, .header .program-caption .program-details .row > div:nth-child(2) {
+  margin-bottom: 10px;
+}
+.header .program-caption .program-details .text {
+  font-family: "Tajawal", sans-serif;
+}
+.header .program-caption .program-details .text span {
+  font-family: "Cairo", sans-serif;
+  color: #F1C40F;
+}
+@media (max-width: 767px) {
+  .header .program-caption .program-details .text span {
+    display: block;
+  }
+}
+.header .scroll-to-bottom {
+  border: 2px solid #F1C40F;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.header .scroll-to-bottom i {
+  font-size: 24px;
+  transition: all 1s linear;
+  animation-name: topAndbottom;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* End Header */
+/* 
+  ** Reset For Bootstrap Framework
+  ** Reset for images to take the full width of the screen
+*/
+article .row {
+  margin: 0;
+  position: relative;
+}
+article .row .col-lg {
+  padding: 0;
+}
+
+/* The coordainte of moral section*/
+.moral section .information {
+  padding: 5px 20px 0 40px;
+  /* Information heading */
+}
+@media (max-width: 991px) {
+  .moral section .information {
+    padding: 15px 30px 20px !important;
+  }
+}
+.moral section .information .heading {
+  font-family: "Changa", sans-serif;
+}
+.moral section .information .heading h2 {
+  font-size: 4.5em;
+  /* Adjust the font size of the heading in other devices */
+}
+@media (max-width: 1300px) {
+  .moral section .information .heading h2 {
+    font-size: 3.3em;
+  }
+}
+@media (max-width: 504px) {
+  .moral section .information .heading h2 {
+    font-size: 3em;
+  }
+}
+.moral section .information .heading h2 .past {
+  color: #ccc;
+}
+.moral section .information .heading h2 .present {
+  color: #00d0ff;
+}
+.moral section .information .info {
+  font-family: "Tajawal", sans-serif;
+  /* Letter of the article */
+}
+@media (min-width: 992px) and (max-width: 1044px) {
+  .moral section .information .info {
+    width: 107%;
+    display: block;
+  }
+}
+.moral section .information .info p {
+  line-height: 1.6;
+  /* For showing typed cursor beside it. */
+  display: inline;
+  padding-left: 5px;
+}
+.moral section .information-image img {
+  height: 100%;
+  /* Adjust the width of the image in other devices (Responsive)*/
+}
+@media (max-width: 991px) {
+  .moral section .information-image img {
+    width: 100%;
+  }
+}
+.moral .comments {
+  padding: 1em 0;
+  margin: 0;
+  position: relative;
+}
+.moral .comments .text-area {
+  text-align: center;
+}
+.moral .comments .text-area textarea {
+  width: 50% !important;
+  margin-top: 0;
+  border: 2px solid #F1C40F !important;
+  color: #FFF !important;
+}
+@media (max-width: 991px) {
+  .moral .comments .text-area textarea {
+    width: 95% !important;
+    margin: 0;
+  }
+}
+.moral .comments .submit-button {
+  width: auto;
+  margin: 0;
+}
+.moral .comments .like-button {
+  width: auto;
+}
+.moral ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #FFF;
+}
+.moral ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #FFF;
+}
+.moral :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #FFF;
+}
+.moral :-moz-placeholder {
+  /* Firefox 18- */
+  color: #FFF;
+}
+
+/* Trust In God Section */
+.trust-in-god {
+  background-image: url("../images/trust-in-god-image.jpg");
+  position: relative;
+  height: 340px;
+}
+@media (max-width: 390px) {
+  .trust-in-god .heading {
+    padding: 0 !important;
+  }
+}
+.trust-in-god .heading h1 {
+  margin-bottom: 28px;
+  color: #00bcd4;
+}
+@media (max-width: 610px) {
+  .trust-in-god .heading h1 {
+    font-size: 4em;
+    margin-right: 0.8em;
+  }
+}
+@media (max-width: 350px) {
+  .trust-in-god .heading h1 {
+    margin-top: -15px;
+  }
+}
+.trust-in-god .heading h1 span {
+  margin-bottom: 3em;
+  position: relative;
+  top: 15px;
+  left: 15px;
+  font-size: 1.2em;
+  font-family: "Cairo", sans-serif;
+  color: #FFF;
+}
+.trust-in-god .heading p {
+  font-family: "Tajawal", sans-serif;
+  margin-top: 3em;
+}
+@media (max-width: 610px) {
+  .trust-in-god .heading p {
+    margin: 0;
+    padding: 0 15px;
+  }
+}
+
+/* Typed Cursor Of Wow.js Animation Effect */
+.typed-cursor {
+  animation-name: fadeToggle;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+.footer {
+  background-color: #222;
+  color: #FFF;
+}
+.footer a {
+  color: #F1C40F;
+  font-size: 17px;
+  /* Adjust the responsive in small devices */
+}
+@media (max-width: 365px) {
+  .footer a {
+    display: block;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=home-page.css.map */

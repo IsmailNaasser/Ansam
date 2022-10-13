@@ -1,0 +1,13 @@
+.footer {
+  background-color: #222;
+  color: #FFF;
+  a {
+    color: $mainColor;
+    font-size: $fontSize + 2;
+    /* Adjust the responsive in small devices */
+    @media (max-width: 365px) {
+      display: block;
+      width: 100%
+    }
+  }
+}

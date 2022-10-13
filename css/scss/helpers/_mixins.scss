@@ -1,0 +1,9 @@
+// Transparent layer coordinate
+@mixin overlayLayer {
+  width: $mainWidth;
+  height: $mainHeight;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 87, 146, 0.8);
+}

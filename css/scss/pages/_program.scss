@@ -1,0 +1,37 @@
+/* Override some things from main header coordinate */
+.header {
+  background-image: url(../images/program-page-images/header-image.jpeg); /* Change the main background image of the header */
+  height: 60vh !important /* Change the main height of the header */
+}
+
+/* Container of all videos in the page */
+.videos {
+  padding: 5em 0;
+  /* Videos coordinate */
+  .video {
+    &:not(:last-of-type) {
+      margin-bottom: $marginPixels + 40
+    }
+    .heading {
+      font-family: $cairo;
+      h2 {
+        color: #1d7a86;
+        font-weight: bold;
+        font-size: 25px;
+        background-color: $mainColor;
+        color: $blackColor;
+        width: $mainWidth - 10;
+        margin: auto !important;
+        @media (max-width: 991px) {
+          font-size: $fontSize + 3
+        }
+      }
+    }
+    /* This is frame wrapper the youtube videos */
+    iframe {
+      border: 0;
+      height: $secondWidth + 500;
+      width: $mainWidth - 10
+    }
+  }
+}

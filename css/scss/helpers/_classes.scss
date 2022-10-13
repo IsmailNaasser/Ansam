@@ -1,0 +1,42 @@
+/* Transparent Layer*/
+.overlay {
+  @include overlayLayer;
+}
+
+/* Hightlight */
+.mark {
+  background-color: #f1c40f;
+  color: #005f9e;
+  padding: 2px 3px 3px
+}
+
+/* Special shape for "و" letter. "و" is a arabic letter*/
+.amp {
+  color: #ffd11a;
+  font-family: $mada;
+  @media (max-width: 500px) {
+      /* If you put the amp class in the middle between two words, he would breake the two words to be verticaly shape, just in devices max width 500 */
+    display: block
+  }
+}
+
+/* Line separate between heading and information */
+.separator {
+  width: 100px;
+  height: 2px;
+  margin: $marginPixels + 3 0;
+  background-color: #ffd11a;
+  display: block;
+}
+
+/* Custom class like bootstrap for coloring the background like sky */
+.bg-sky {
+  background-color: #0c5460 !important
+}
+
+/* responsive order property to change the arrangement of the element in small devices */
+.order-m991-2 {
+  @media (max-width: 991px) {
+    order: 2
+  }
+}

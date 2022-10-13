@@ -1,0 +1,73 @@
+/* Start Comments System */
+.comments {
+  margin-bottom: 3em;
+  .triangle {
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 0 15px 15px 15px;
+    border-color: #F00 transparent $mainColor;
+    border-style: solid;
+    position: absolute !important;
+    top: 1%;
+    @media (max-width: 991px) {
+      display: none
+    }
+  }
+  form {
+  .text-area {
+    @media (max-width: 991px) {
+      text-align: center
+    }
+      textarea {
+        width: $mainWidth - 10;
+        height: $secondHeight + 25;
+        resize: none;
+        font-family: $tajwal;
+        padding: $paddingPixels;
+        transition: all .3s ease-in-out;
+        border-radius: 3px;
+        margin: 15px;
+        margin-top: 3em;
+        background: transparent;
+        border: 1px solid #1d7a86;
+        color: $blackColor;
+        transition: all .3s ease-in-out;
+        &:focus {
+          border: 1px solid #1d7a86
+        }
+        @media (max-width: 991px) {
+          width: $mainWidth - 3 !important;
+          margin-bottom: $marginPixels !important;
+        }
+      }
+    }
+    .submit-button {
+      font-family: $cairo;
+      width: $mainWidth - 10;
+      margin: auto;
+      input {
+        background: none;
+        border: 1px solid #1d7a86;
+        padding: 5px 30px;
+        cursor: pointer;
+        color: #1d7a86;
+        font-weight: bold;
+        border-radius: 3px;
+        transition: all .3s ease-in-out;
+        &:hover {
+          background-color: #1d7a86;
+          color: $whiteColor
+        }
+      }
+    }
+    .like-button {
+      width: $mainWidth;
+      button {
+        @extend %button-style;
+        padding: 5px 20px;
+      }
+    }
+  }
+}
+/* End Comments System */

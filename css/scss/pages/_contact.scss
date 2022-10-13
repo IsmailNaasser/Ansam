@@ -1,0 +1,38 @@
+/* Override some things from main header coordinate */
+.header {
+  background-image: url(../images/contact-page-images/header-image.jpeg); /* Change the main background image of the header */
+  .program-caption {
+    .heading-wrapper {
+      @media (max-width: 375px) {
+        height: 90% !important
+      }
+      .heading {
+        h1 {
+          font-family: $change;
+          font-size: $headingFontSize + 6;
+          @media (max-width: 767px) {
+            font-size: $headingFontSize;
+          }
+          span {
+            color: $mainColor
+          }
+        }
+        p {
+          font-family: $tajwal;
+          margin-top: $marginPixels + 35;
+          font-size: $fontSize + 2;
+          @media (max-width: 375px) {
+            margin-top: $marginPixels + 20
+          }
+          @media (max-width: 356px) {
+            margin-top: $marginPixels + 5
+          }
+          .mark {
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+  }
+  
+}

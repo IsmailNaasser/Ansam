@@ -1,0 +1,169 @@
+/* 
+  ** Reset For Bootstrap Framework
+  ** Reset for images to take the full width of the screen
+*/
+article {
+  .row {
+    margin: 0;
+    position: relative;
+    .col-lg {
+      padding: 0
+    }
+  }
+}
+
+/* The coordainte of moral section*/
+.moral {
+  section {
+    // The box of the details of the article
+    .information {
+      padding: 5px 20px 0 40px;
+      @media (max-width: 991px) {
+        padding: 15px 30px 20px !important
+      }
+      /* Information heading */
+      .heading {
+        font-family: $change;
+        h2 {
+          font-size: $headingFontSize + .5;
+          /* Adjust the font size of the heading in other devices */
+          @media (max-width: 1300px) {
+            font-size: $headingFontSize - .7
+          }
+          @media (max-width: 504px) {
+            font-size: $headingFontSize - 1
+          }
+          .past {
+            color: #ccc
+          }
+          .present {
+            color: #00d0ff;
+          }
+        }
+      }
+      // Container the letter of the article
+      .info {
+        font-family: $tajwal;
+        @media (min-width: 992px) and (max-width: 1044px) {
+          width: $mainWidth + 7;
+          display: block;
+        }
+        /* Letter of the article */
+        p {
+          line-height: $paragraphLineHeight;
+          /* For showing typed cursor beside it. */
+          display: inline;
+          padding-left: $paddingPixels - 5
+        }
+      }
+    }
+    // Container the image of the article
+    .information-image {
+      img {
+        height: $mainHeight;
+        /* Adjust the width of the image in other devices (Responsive)*/
+        @media (max-width: 991px) {
+          width: $mainWidth
+        }
+      }
+    }
+  }
+  // Override some things in comments system
+  .comments {
+    padding: 1em 0;
+    margin: 0;
+    position: relative;
+    .text-area {
+      text-align: center;
+      textarea {
+        width: $mainWidth - 50% !important;
+        margin-top: 0;
+        border: 2px solid $mainColor !important;
+        color: $whiteColor !important;
+        @media (max-width: 991px) {
+          width: $mainWidth - 5 !important;
+          margin: 0
+        }
+      }
+    }
+    .submit-button {
+      width: auto;
+      margin: 0;
+      input {
+        @extend %button-style;
+      }
+    }
+    .like-button {
+      width: auto
+    }
+  }
+  // Change the color of the placeholder to white color
+  
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    
+    color: $whiteColor;
+  }
+  
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: $whiteColor;
+  }
+  
+  :-ms-input-placeholder { /* IE 10+ */
+    color: $whiteColor;
+  }
+  
+  :-moz-placeholder { /* Firefox 18- */
+    color: $whiteColor;
+  }
+}
+
+/* Trust In God Section */
+.trust-in-god {
+  background-image: url("../images/trust-in-god-image.jpg");
+  @extend %background-properties;
+  position: relative;
+  height: $secondWidth + 240;
+  .heading {
+    @media (max-width: 390px) {
+      padding: 0 !important
+    }
+    h1 {
+      margin-bottom: $marginPixels + 18;
+      color: #00bcd4;
+      // Adjust font size and margin of the h1 in other devices (Responsive)
+      @media (max-width: 610px) {
+        font-size: $headingFontSize;
+        margin-right: .8em
+      }
+      // Adjust margin of the h1 in other devices (Responsive)
+      @media (max-width: 350px) {
+        margin-top: -15px
+      }
+      span {
+        margin-bottom: 3em;
+        position: relative;
+        top: 15px;
+        left: 15px;
+        font-size: 1.2em;
+        font-family: $cairo;
+        color: $whiteColor
+      }
+    }
+    p {
+      font-family: $tajwal;
+      margin-top: 3em;
+      // Adjust padding and margin of the paragraph in other devices
+      @media (max-width: 610px) {
+        margin: 0;
+        padding: 0 15px
+      }
+    }
+  }
+}
+
+/* Typed Cursor Of Wow.js Animation Effect */
+.typed-cursor {
+  animation-name: fadeToggle;
+  animation-timing-function: ease-in-out;
+  animation-duration: .5s
+}

@@ -1,0 +1,23 @@
+// Background properties
+%background-properties {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 50%
+}
+
+// Button style
+%button-style {
+  border-color: $mainColor !important;
+  color: $whiteColor !important;
+  border-width: 2px;
+  font-weight: bold;
+  transition: all .3s ease-in-out;
+  font-family: $cairo;
+  font-size: $fontSize;
+  border-radius: 3px;
+  &:hover {
+    background-color: $mainColor;
+    color: $blackColor !important
+  }
+}
